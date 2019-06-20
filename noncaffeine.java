@@ -23,7 +23,8 @@ public class noncaffeine extends JFrame {
 				recipetext A = new recipetext(buttonCommand);
 			} catch (FileNotFoundException e1) {
 				e1.printStackTrace();
-				search.setText("�ٽ� �Է��ϼ���");
+				search.setText("다시 입력하세요");
+			       JOptionPane.showMessageDialog(null, "메뉴를 찾을 수 없습니다. 다시 입력하세요");
 			}  
         }
     }
@@ -50,7 +51,7 @@ public class noncaffeine extends JFrame {
 		JPanel searchPanel = new JPanel();
 		searchPanel.setLayout(new GridLayout(2, 1));
 		
-		search = new JTextField("�޴��̸��� �˻��ϼ���.", NUMBER_OF_CHAR);
+		search = new JTextField("메뉴이름을 검색하세요.", NUMBER_OF_CHAR);
 		search.setBackground(Color.white);
 		searchPanel.add(search);
 		
